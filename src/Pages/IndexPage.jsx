@@ -43,7 +43,7 @@ const IndexPage = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
     axios
-      .get("https://vehicle-care-back-11.onrender.com/services")
+      .get("https://vehicle-care-back-12.onrender.com/services")
       
       .then((response) => {
         setServices([...response.data]);
@@ -75,7 +75,7 @@ const IndexPage = () => {
                 >
                   {service.photos?.[0] && (
                     <img
-                      src={`https://vehicle-care-back-11.onrender.com/uploads/${service.photos?.[0]}`}
+                      src={`https://vehicle-care-back-12.onrender.com/uploads/${service.photos?.[0]}`}
                       style={{ objectFit: "cover" }}
                       className="aspect-square p-3 img-fluid"
                       alt={service.name}

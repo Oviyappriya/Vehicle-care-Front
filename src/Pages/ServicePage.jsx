@@ -11,7 +11,7 @@ export default function ServicesPage() {
     if (!_id) {
       return;
     }
-    axios.get(`https://vehicle-care-back-11.onrender.com/services/${_id}`).then((response) => {
+    axios.get(`https://vehicle-care-back-12.onrender.com/services/${_id}`).then((response) => {
       setService(response.data);
     });
 
@@ -30,7 +30,7 @@ export default function ServicesPage() {
           <div>
             {service.photos?.[0] && (
               <img
-                src={`http://localhost:4000/uploads/${service.photos?.[0]}`}
+                src={`https://vehicle-care-back-12.onrender.com/uploads/${service.photos?.[0]}`}
                 alt={service.name}
                 className="img-fluid"
                 style={{
