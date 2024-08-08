@@ -9,7 +9,7 @@ const UserContextProvider = ({children}) => {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    axios.get("https://vehicle-care-back.onrender.com/profile",)
+    axios.get("https://vehicle-care-back.onrender.com/profile", { withCredentials: true })
       .then(({ data }) => {
         setUser(data);
         setReady(true);

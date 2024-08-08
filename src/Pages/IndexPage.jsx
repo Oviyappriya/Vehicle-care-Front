@@ -43,7 +43,7 @@ const IndexPage = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
     axios
-      .get("https://vehicle-care-back.onrender.com/services")
+      .get("https://vehicle-care-back.onrender.com/services",{withCredentials: true})
       
       .then((response) => {
         setServices([...response.data]);

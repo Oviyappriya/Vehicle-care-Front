@@ -10,7 +10,7 @@ const RegisterPage = () => {
     ev.preventDefault();
     try {
       await axios.post(
-        "https://vehicle-care-back.onrender.com/register",
+        "https://vehicle-care-back.onrender.com/register",{withCredentials: true},
         {
           name,
           email,

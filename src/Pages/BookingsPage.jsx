@@ -7,7 +7,7 @@ const BookingsPage = () => {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    axios.get("https://vehicle-care-back.onrender.com/bookings").then((response) => {
+    axios.get("https://vehicle-care-back.onrender.com/bookings", {withCredentials: true}).then((response) => {
       setBookings(response.data);
     });
   }, []);

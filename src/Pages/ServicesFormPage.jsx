@@ -22,7 +22,7 @@ export default function ServicesFormPage() {
     if (!_id) return;
 
     axios
-      .get("https://vehicle-care-back.onrender.com/services/" + _id)
+      .get("https://vehicle-care-back.onrender.com/services/" + _id ,{withCredentials: true})
       .then((response) => {
         const { data } = response;
         if (data) {
@@ -78,13 +78,13 @@ export default function ServicesFormPage() {
       let response;
       if (_id) {
         response = await axios.put(
-          "https://vehicle-care-back.onrender.com/services",
+          "https://vehicle-care-back.onrender.com/services",{withCredentials: true},
           serviceData
         );
         console.log({ _id });
       } else {
         response = await axios.post(
-          "https://vehicle-care-back.onrender.com/services",
+          "https://vehicle-care-back.onrender.com/services", {withCredentials: true},
           serviceData,
         );
       }

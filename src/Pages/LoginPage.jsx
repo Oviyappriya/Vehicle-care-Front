@@ -11,7 +11,7 @@ const LoginPage = () => {
     ev.preventDefault();
     try {
       const response = await axios.post(
-        "https://vehicle-care-back.onrender.com/login",
+        "https://vehicle-care-back.onrender.com/login",{withCredentials: true},
         {
           email,
           password,

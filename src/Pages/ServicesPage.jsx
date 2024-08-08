@@ -8,7 +8,7 @@ export default function ServicePage() {
 
   useEffect(() => {
     axios
-      .get("https://vehicle-care-back.onrender.com/user-services")
+      .get("https://vehicle-care-back.onrender.com/user-services",{withCredentials: true})
       .then((response) => {
         setServices(response.data);
       })

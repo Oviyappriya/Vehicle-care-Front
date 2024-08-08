@@ -11,7 +11,7 @@ export default function ServicesPage() {
     if (!_id) {
       return;
     }
-    axios.get(`https://vehicle-care-back.onrender.com/services/${_id}`).then((response) => {
+    axios.get(`https://vehicle-care-back.onrender.com/services/${_id}`,{withCredentials: true}).then((response) => {
       setService(response.data);
     });
 
