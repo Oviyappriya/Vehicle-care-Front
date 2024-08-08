@@ -84,8 +84,8 @@ export default function ServicesFormPage() {
         console.log({ _id });
       } else {
         response = await axios.post(
-          "https://vehicle-care-back.onrender.com/services", {withCredentials: true},
-          serviceData,
+          "https://vehicle-care-back.onrender.com/services",
+          serviceData, {withCredentials: true},
         );
       }
 

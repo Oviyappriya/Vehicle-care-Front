@@ -11,11 +11,11 @@ const LoginPage = () => {
     ev.preventDefault();
     try {
       const response = await axios.post(
-        "https://vehicle-care-back.onrender.com/login",{withCredentials: true},
+        "https://vehicle-care-back.onrender.com/login",
         {
           email,
           password,
-        }
+        },{withCredentials: true},
       );
       setUser(response.data);
       alert("Login succesful.");

@@ -13,8 +13,8 @@ export default function PhotosUploader({ addedPhotos = [], onChange }) {
     ev.preventDefault();
     try {
       const { data: filename } = await axios.post(
-        "https://vehicle-care-back.onrender.com/upload-by-link", { withCredentials: true },
-        { link: photoLink },
+        "https://vehicle-care-back.onrender.com/upload-by-link", 
+        { link: photoLink },{ withCredentials: true }
         );
       onChange((prev) =>
         Array.isArray(prev) ? [...prev, filename] : [filename]

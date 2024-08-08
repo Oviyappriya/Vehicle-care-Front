@@ -10,12 +10,13 @@ const RegisterPage = () => {
     ev.preventDefault();
     try {
       await axios.post(
-        "https://vehicle-care-back.onrender.com/register",{withCredentials: true},
+        "https://vehicle-care-back.onrender.com/register",
         {
           name,
           email,
           password,
-        }
+        },
+        { withCredentials: true }
       );
       alert("Registration successful. Now you can log in");
     } catch (e) {

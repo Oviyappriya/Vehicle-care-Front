@@ -20,14 +20,14 @@ const BookingWidget = ({ service }) => {
 
   async function bookThisService() {
     try {
-      const response = await axios.post("https://vehicle-care-back.onrender.com/bookings", { withCredentials: true }, {
+      const response = await axios.post("https://vehicle-care-back.onrender.com/bookings",  {
         checkIn,
         checkOut,
         name,
         phone,
         service: service._id,
         price: service.price,
-      });
+      },{ withCredentials: true });
       const bookingId = response.data._id;
       setRedirect("/account/bookings/" + bookingId);
     } catch (err) {
