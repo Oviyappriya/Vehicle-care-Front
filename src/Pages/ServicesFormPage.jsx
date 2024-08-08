@@ -86,9 +86,6 @@ export default function ServicesFormPage() {
         response = await axios.post(
           "https://vehicle-care-back-12.onrender.com/services",
           serviceData,
-          {
-            withCredentials: true,
-          }
         );
       }
 

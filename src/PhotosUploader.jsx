@@ -1,9 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import { faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";
-
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import axios from "axios";
@@ -17,8 +15,7 @@ export default function PhotosUploader({ addedPhotos = [], onChange }) {
       const { data: filename } = await axios.post(
         "https://vehicle-care-back-12.onrender.com/upload-by-link",
         { link: photoLink },
-        { withCredentials: true }
-      );
+        );
       onChange((prev) =>
         Array.isArray(prev) ? [...prev, filename] : [filename]
       );
@@ -36,9 +33,7 @@ export default function PhotosUploader({ addedPhotos = [], onChange }) {
       data.append("photos", files[i]);
     }
     axios
-      .post("https://vehicle-care-back-12.onrender.com/upload", data, {
-        headers: { "Content-type": "multipart/form-data" },
-      })
+      .post("https://vehicle-care-back-12.onrender.com/upload", data)
       .then((response) => {
         const { data: filenames } = response;
         onChange((prev) =>
@@ -79,7 +74,9 @@ export default function PhotosUploader({ addedPhotos = [], onChange }) {
                     width: "150px",
                     height: "150px",
                   }}
-                  src={"https://vehicle-care-back-12.onrender.com/uploads/" + link}
+                  src={
+                    "https://vehicle-care-back-12.onrender.com/uploads/" + link
+                  }
                   alt=""
                 />
                 <div>
