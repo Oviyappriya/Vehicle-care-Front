@@ -13,7 +13,7 @@ export default function PhotosUploader({ addedPhotos = [], onChange }) {
     ev.preventDefault();
     try {
       const { data: filename } = await axios.post(
-        "https://vehicle-care-back-12.onrender.com/upload-by-link",
+        "https://vehicle-care-back.onrender.com/upload-by-link",
         { link: photoLink },
         );
       onChange((prev) =>
@@ -33,7 +33,7 @@ export default function PhotosUploader({ addedPhotos = [], onChange }) {
       data.append("photos", files[i]);
     }
     axios
-      .post("https://vehicle-care-back-12.onrender.com/upload", data)
+      .post("https://vehicle-care-back.onrender.com/upload", data)
       .then((response) => {
         const { data: filenames } = response;
         onChange((prev) =>
@@ -75,7 +75,7 @@ export default function PhotosUploader({ addedPhotos = [], onChange }) {
                     height: "150px",
                   }}
                   src={
-                    "https://vehicle-care-back-12.onrender.com/uploads/" + link
+                    "https://vehicle-care-back.onrender.com/uploads/" + link
                   }
                   alt=""
                 />

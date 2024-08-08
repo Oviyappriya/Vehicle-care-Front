@@ -14,7 +14,7 @@ export default function ProfilePage() {
   }
 
   async function logout() {
-    await axios.post("https://vehicle-care-back-12.onrender.com/logout");
+    await axios.post("https://vehicle-care-back.onrender.com/logout");
     setRedirect("/");
     setUser(null);
   }

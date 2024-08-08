@@ -8,7 +8,7 @@ export default function ServicePage() {
 
   useEffect(() => {
     axios
-      .get("https://vehicle-care-back-12.onrender.com/user-services")
+      .get("https://vehicle-care-back.onrender.com/user-services")
       .then((response) => {
         setServices(response.data);
       })
@@ -40,7 +40,7 @@ export default function ServicePage() {
               <div className="d-flex justify-content-start align-items-start pointer">
                 {service.photos.length > 0 && (
                   <img
-                    src={`https://vehicle-care-back-12.onrender.com/uploads/${service.photos[0]}`}
+                    src={`https://vehicle-care-back.onrender.com/uploads/${service.photos[0]}`}
                     alt={service.name}
                     className="img-fluid"
                     style={{
