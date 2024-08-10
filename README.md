@@ -1,8 +1,12 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Netify link: https://exquisite-mousse-7a4519.netlify.app
+In this Project,
+ ---> I created login page and register page
+ ---> Using the Mongo DB, I have stored all the Vehicle service details
+ ---> In the home, page all the types of services are displayed. If we click the one service and make booking of it.
+ ---> If we click the Profile there is logout button then we logout our page.
+ Implementation,
+  1)React
+  2)vite
+  3)Bootstrap
+  4)Fontawsome
+  
